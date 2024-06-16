@@ -26,8 +26,8 @@ jobs:
 
       - name: Build the Docker image
         run: |
-          docker build -t barkuni-app .
-          docker tag barkuni-app:latest ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.us-east-1.amazonaws.com/sqs-to-s3:latest
+          docker build -t sqs-to-s3 .
+          docker tag sqs-to-s3:latest ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.us-east-1.amazonaws.com/sqs-to-s3:latest
 
       - name: Push Docker image to ECR
         run: |
